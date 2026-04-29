@@ -20,7 +20,63 @@
 }
 
 body {
+  height: 100%;
+  display: flex;
+  /*
   background: var(--background);
   color: var(--foreground);
+  */
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+.form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+fieldset {
+  display: grid;
+  gap: 8px;
+}
+
+.container {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  height: 100%;
+  margin: 24px;
+
+  .container-item {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    &.patient-data {
+      border-width: 1px;
+      border-radius: 6px;
+      padding: 16px;
+      box-shadow: 0px 1px 4px 2px gray;
+      width: 300px;
+      height: 400px;
+    }
+  }
+  
+  h2 {
+    font-weight: bold;
+    color: gray;
+    font-family: Andale Mono;
+  }
+
+  h3 {
+    font-weight: bold;
+    color: gray;
+    font-family: Andale Mono;
+  }
+}
+
+
+

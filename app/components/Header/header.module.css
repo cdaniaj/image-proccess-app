@@ -1,0 +1,9 @@
+.custom-header {
+    background: rgb(159, 106, 244);   
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}

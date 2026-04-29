@@ -1,0 +1,12 @@
+.custom-button {
+    border-width: 1px;
+    padding: 8px;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: rgb(159, 106, 244);      
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}

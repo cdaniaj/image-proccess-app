@@ -1,0 +1,92 @@
+.diagnostic-result-container {
+    position: relative;
+    flex-direction: column;
+    gap: 16px;
+    display: flex;
+    border-width: 1px;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 3px 4px 4px 1px gray;
+
+    .result-title {
+        display: flex;
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .result-item-container {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+    }
+
+
+    .result-item {
+        display: flex;
+        justify-items: auto;
+        justify-content: space-between;
+        gap: 48px;
+        font-weight: bold;
+        color: gray;
+        span {
+            font-family: Avenir Next;
+        }
+
+        .label {
+            gap: 8px;
+            display: flex;
+        }
+    }
+
+
+    .result-icon {
+        width: 100px;
+        height: 120px;
+    }
+
+    .no-risk {
+        color: green;
+    }
+
+    .high-risk {
+        color: rgb(176, 42, 42);
+    }
+
+    .moderate-risk {
+        color: #ff9f00;
+    }
+
+    .save-sample-container {
+        justify-content: center;
+        display: flex;
+
+        .saved-sample-label {
+            color: #000;
+            font-weight: bold;
+            border-width: 1px;
+            padding: 8px;
+            border-radius: 8px;
+        }
+
+        .save-sample-btn {
+            color: #000000;
+            cursor: pointer;
+            border-width: 1px;
+            border-color: #317a27;
+            border-radius: 6px;
+            padding: 8px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-weight: bold;
+        }
+    }
+
+}
+
+.sub-title {
+    margin-bottom: 26px;
+}
+
