@@ -4,7 +4,7 @@ Uma aplicação Next.js para processamento e manipulação de imagens com interf
 
 ## 📋 Sobre o Projeto
 
-**Image Process App** é uma aplicação web moderna construída com Next.js que permite aos usuários processar e manipular imagens de forma fácil e intuitiva. A aplicação é desenvolvida com TypeScript, React 19 e Tailwind CSS, oferecendo uma experiência de usuário responsiva e de alta performance.
+**Image Process App** é uma aplicação web moderna construída com Next.js que permite aos usuários processar e manipular imagens mamograficas de forma fácil e intuitiva afim de levar maior precisao e eficiencia na analise mamografica. A aplicação é desenvolvida com TypeScript, React 19 e Tailwind CSS, oferecendo uma experiência de usuário responsiva e de alta performance.
 
 ### Tecnologias Utilizadas
 
@@ -19,10 +19,9 @@ Uma aplicação Next.js para processamento e manipulação de imagens com interf
 
 A aplicação permite que você:
 
-1. **Carregue imagens** - Selecione imagens do seu computador
-2. **Processe imagens** - Aplique várias operações de processamento
-3. **Recorte imagens** - Use a ferramenta de corte interativa
-4. **Exporte resultados** - Baixe as imagens processadas
+1. **Carregue imagens** - Selecione imagens PNG ou JPEG de mamografias
+2. **Recorte imagens** - Use a ferramenta de corte interativa para maior precisao de analise
+4. **Processamento e analise da amostra** - Solicita analise de amostra e extracao de dados baseado na amostra selecionada
 
 A arquitetura utiliza componentes React reutilizáveis e otimizados para performance, com hot-reload em desenvolvimento para melhor experiência de desenvolvimento.
 
@@ -94,7 +93,7 @@ docker run -p 80:80 image-process-app:latest
 ```
 
 3. **Acesse a aplicação:**
-Abra seu navegador e acesse [http://localhost](http://localhost)
+Abra seu navegador e acesse [http://localhost](http://localhost:3000)
 
 ### Detalhes do Dockerfile
 
@@ -133,42 +132,26 @@ docker build --no-cache -t image-process-app:latest .
 
 ```
 image-proccess-app/
-├── app/               # Pasta principal da aplicação Next.js
-│   └── page.tsx       # Página principal
-├── components/        # Componentes React reutilizáveis
+├── app/                    # Pasta principal da aplicação Next.js
+│   └── page.tsx            # Página principal
+│   └── components/         # Pasta de componentes
+│     └── CropImage         # Componente para recorte de imagens
+│     └── DiagnosticButton  # Botao personalizado para disparar funcao para analise de amostra
+│     └── Form              # Componente de formulario para dados de pacientes
+│     └── Header            # Header da pagina
+│     └── Result            # Container para demonstracao de resultados obtidos pela analise de amostra
+│     └── Title             # Titulo da pagina
+
+│   └── services/            # Pasta com servicos essenciais
+│     └── patientService.ts  # Integracao com APIs para extracao de dados via amostra e confirmacao dos dados via humano (exporta amostra           analisada e nova linha no csv)
+
+├── out/               # Arquivos buildados
 ├── public/            # Arquivos estáticos
 ├── Dockerfile         # Configuração Docker multi-stage
 ├── package.json       # Dependências do projeto
 ├── tailwind.config.js # Configuração Tailwind CSS
 └── tsconfig.json      # Configuração TypeScript
 ```
-
-## 📚 Saiba Mais
-
-Para aprender mais sobre as tecnologias utilizadas:
-
-- [Documentação Next.js](https://nextjs.org/docs) - Recursos e guias do Next.js
-- [Tutorial Next.js](https://nextjs.org/learn) - Tutorial interativo
-- [Documentação React](https://react.dev) - Guia completo do React
-- [Documentação Tailwind CSS](https://tailwindcss.com/docs) - Referência de classes CSS
-- [Docker Documentation](https://docs.docker.com/) - Guia de Docker
-
-## 🚀 Deploy
-
-### Deploy em Vercel
-
-A forma mais fácil de fazer deploy de uma aplicação Next.js é usar a [Vercel Platform](https://vercel.com):
-
-1. Faça push do seu código para um repositório GitHub
-2. Conecte seu repositório à Vercel
-3. Vercel detectará automaticamente que é um projeto Next.js
-4. O deploy será feito automaticamente a cada push
-
-Confira a [documentação de deployment do Next.js](https://nextjs.org/docs/app/building-your-application/deploying) para mais detalhes.
-
-## 📝 Licença
-
-Este projeto está disponível sob a licença especificada no repositório.
 
 ## 👤 Autor
 
