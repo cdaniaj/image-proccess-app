@@ -217,7 +217,7 @@ async function onDownloadCropClick({patient_name, patient_id}: any) {
           <input 
             id="file-upload" 
             type="file" 
-            accept="image/*" 
+            accept=".jpg, .jpeg, .png"
             onChange={onSelectFile} 
           />
        </div>
