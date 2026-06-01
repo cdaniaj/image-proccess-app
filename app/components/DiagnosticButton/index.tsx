@@ -21,7 +21,7 @@ export default function DiagnosticButton() {
   return (
     <>
       <button className={styles['custom-button']} onClick={handleAnaliseClick}>
-        <MdOutlineImageSearch /> Analisar amostra
+        <MdOutlineImageSearch /> Analisar amostra 2
       </button>
     </>
   );
